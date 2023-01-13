@@ -1,0 +1,8 @@
+
+import pandas as pd
+df2 = pd.ExcelFile('data.xlsx')
+sheet_names = df2.sheet_names
+for i in range(4):
+    eval('df' + str(i+1)) = pd.read_excel('data.xlsx',sheet_name=sheet_names[i])
+    print('df'+str(i+1)+'如下:')
+    print(df1)
